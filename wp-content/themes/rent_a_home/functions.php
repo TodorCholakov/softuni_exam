@@ -28,3 +28,9 @@ function get_the_post_date() {
     get_template_part('template-part');
 }
 add_action('wp', 'get_the_post_date');
+
+/** Register nav menu */
+function rent_a_home_register_menus() {
+    register_nav_menu( 'primary-menu', __( 'Primary Menu', 'rent_a_home' ) );
+}
+add_action( 'after_setup_theme', 'rent_a_home_register_menus' );
